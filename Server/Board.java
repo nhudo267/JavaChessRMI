@@ -103,5 +103,74 @@ public class Board
 			board[x2][y2].setPositionY(y2);
 		}
 		return kingTaken;
+    }
+    public Piece getPieceAt(int x, int y)
+	{
+		return board[x][y];
+	}
+	public String getTypeAt(int x, int y)
+	{
+		return board[x][y].getType();
+	}
+	public String toString()  //this is mostly for testing purposes
+	{
+		String str = "";
+		
+		for(int j = 0; j <= 7; j++)
+		{
+			for(int i = 0; i <= 7; i++)
+			{
+				str = str + this.getTypeAt(i, j) + "\t";
+				if(i == 7)
+					str = str + "\n";
+			}
+		}
+
+		return str;
+	}
+	public int getColorAt(int x, int y)
+	{
+		return board[x][y].getColor();
+	}
+	public boolean gameOver()
+	{
+		return gameOver;
+	}
+	public int getWinningPlayer()
+	{
+		return winningPlayer;
+	}
+	public int getPlayerTurn()
+	{
+		return colorTurn;
+	}
+	public void nextPlayerTurn()
+	{
+		
+		if(colorTurn == 1)
+		{
+			colorTurn = 2;
+		}
+		else
+		{
+			colorTurn = 1;
+		}
+	}
+	public void setWinningPlayer(int p)
+	{
+		if(p == 0)
+		{
+			winningPlayer = p;
+			gameOver = false;
+		}
+		else
+		{
+			winningPlayer = p;
+			gameOver = true;
+		}
+	}
+	public void setPlayerTurn(int t)
+	{
+		colorTurn = t;
 	}	
 }
