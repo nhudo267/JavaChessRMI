@@ -22,7 +22,8 @@ public class Board
 		board[2][0] = new Piece(2,0,2, "Bishop");
 		board[3][0] = new Piece(3,0,2, "Queen");
 		board[4][0] = new Piece(4,0,2, "King");
-		board[5][0] = new Piece(5,0,2, "Bishop");
+        board[5][0] = new Piece(5,0,2, "Bishop");
+        
 		board[6][0] = new Piece(6,0,2, "Knight");
 		board[7][0] = new Piece(7,0,2, "Rook");
 		
@@ -57,5 +58,50 @@ public class Board
 		board[6][7] = new Piece(6,7,1, "Knight");
 		board[7][7] = new Piece(7,7,1, "Rook");
 	}
-	
+	public boolean swap(int x1, int y1, int x2, int y2, int colorTurn)  //not working
+	{
+		boolean kingTaken = false;
+		//if neither of the pieces is a blank piece then replace the opponents piece with a blank piece
+		if(!Objects.equals(this.getTypeAt(x1,y1), "BlankPiece") && !Objects.equals(this.getTypeAt(x2,y2), "BlankPiece"))
+		{
+			if(colorTurn == 1)
+			{
+				
+				if(Objects.equals(this.getTypeAt(x2,y2), "King"))
+				{
+					kingTaken = true;
+				}
+				board[x2][y2] = this.getPieceAt(x1, y1);
+				board[x2][y2].setPositionX(x2);
+				board[x2][y2].setPositionY(y2);
+				board[x1][y1] = new Piece(x1, y1, 0, "BlankPiece");
+				
+			}
+			else if(colorTurn == 2)
+			{
+				if(Objects.equals(this.getTypeAt(x2,y2), "King"))
+				{
+					kingTaken = true;
+				}
+				board[x2][y2] = this.getPieceAt(x1, y1);
+				board[x2][y2].setPositionX(x2);
+				board[x2][y2].setPositionY(y2);
+				board[x1][y1] = new Piece(x1, y1, 0, "BlankPiece");
+
+			}
+			
+		}
+		//if one of them is a blank piece just swap them and change the piece's as well as boards positions
+		else
+		{
+			Piece temp = board[x1][y1].returnCopy();
+			board[x1][y1] = this.getPieceAt(x2, y2);
+			board[x2][y2] = temp;
+			board[x1][y1].setPositionX(x1);
+			board[x1][y1].setPositionY(y1);
+			board[x2][y2].setPositionX(x2);
+			board[x2][y2].setPositionY(y2);
+		}
+		return kingTaken;
+	}	
 }
