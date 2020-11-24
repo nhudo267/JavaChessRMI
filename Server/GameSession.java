@@ -38,5 +38,36 @@ public class GameSession extends UnicastRemoteObject implements GameSessionInter
 			return true;
 		}
 		else{return false;}
+    }
+    
+	@Override
+	public int getColorAt(int x, int y) throws RemoteException
+	{
+		return board.getColorAt(x, y);
 	}
+	
+	@Override
+	public boolean gameOver() throws RemoteException
+	{
+		return board.gameOver();
+	}
+	
+	@Override
+	public int getWinningPlayer() throws RemoteException
+	{
+		return board.getWinningPlayer();
+	}
+	
+	@Override
+	public int getPlayerTurn() throws RemoteException
+	{
+		return board.getPlayerTurn();
+	}
+	
+	@Override
+	public void nextPlayerTurn() throws RemoteException
+	{
+		board.nextPlayerTurn();
+	}
+	
 }
