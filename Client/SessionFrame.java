@@ -153,5 +153,61 @@ public class SessionFrame extends JFrame
 			
 			this.add(pan);	
 	}
-  
+  	public void refresh() throws RemoteException
+	{
+		if(ChessClient.getOcFromGame(0) == 0)
+		{
+			gameOc1.setText("Current Players: 0");
+			game1JoinButton.setEnabled(true);
+			openClosedButton1.setIcon(openIcon);
+		}
+		if(ChessClient.getOcFromGame(0) == 1)
+		{
+			gameOc1.setText("Current Players: 1");
+			game1JoinButton.setEnabled(true);
+			openClosedButton1.setIcon(openIcon);
+		}
+		if(ChessClient.getOcFromGame(0) == 2)
+		{
+			gameOc1.setText("Current Players: 2");
+			game1JoinButton.setEnabled(false);
+			openClosedButton1.setIcon(closedIcon);
+		}
+		if(ChessClient.getOcFromGame(1) == 0)
+		{
+			gameOc2.setText("Current Players: 0");
+			game2JoinButton.setEnabled(true);
+			openClosedButton2.setIcon(openIcon);
+		}
+		if(ChessClient.getOcFromGame(1) == 1)
+		{
+			gameOc2.setText("Current Players: 1");
+			game2JoinButton.setEnabled(true);
+			openClosedButton2.setIcon(openIcon);
+		}
+		if(ChessClient.getOcFromGame(1) == 2)
+		{
+			gameOc2.setText("Current Players: 2");
+			game2JoinButton.setEnabled(false);
+			openClosedButton2.setIcon(closedIcon);
+		}
+		if(ChessClient.getOcFromGame(2) == 0)
+		{
+			gameOc3.setText("Current Players: 0");
+			game3JoinButton.setEnabled(true);
+			openClosedButton3.setIcon(openIcon);
+		}
+		if(ChessClient.getOcFromGame(2) == 1)
+		{
+			gameOc3.setText("Current Players: 1");
+			game3JoinButton.setEnabled(true);
+			openClosedButton3.setIcon(openIcon);
+		}
+		if(ChessClient.getOcFromGame(2) == 2)
+		{
+			gameOc3.setText("Current Players: 2");
+			game3JoinButton.setEnabled(false);
+			openClosedButton3.setIcon(closedIcon);
+		}
+	}
   }
