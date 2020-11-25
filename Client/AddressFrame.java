@@ -64,4 +64,18 @@ public class AddressFrame extends JFrame
 		
 	}
 	
-
+	//define button listener class
+	private class ButtonListener implements ActionListener
+	{	
+		@Override
+		public void actionPerformed(ActionEvent e)
+		{
+			if(e.getSource() == button)
+			{	
+				ChessClient.serverIP = tf.getText();
+				ChessClient.ipEntered = true;
+			}
+		}
+	}
+	
+}
