@@ -11,4 +11,11 @@ public class Piece {
 		this.positionY =-1;
 		this.setColor(c);
 	}
+  Piece(int x, int y, int c, String pT)
+	{
+		this.setPositionX(x);
+		this.positionY = y;
+		this.setColor(c);
+		pieceType = pT;
+	}
 }
