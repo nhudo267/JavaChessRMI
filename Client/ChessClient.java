@@ -39,7 +39,17 @@ public class ChessClient extends JFrame
 	public static JButton quitBut = new JButton("Quit");  			//quit button
 	
 	//Image icons for all different pieces - self explanatory
-	
+	ImageIcon wpawn = new ImageIcon(getClass().getResource("wpawn.png"));
+	ImageIcon bpawn = new ImageIcon(getClass().getResource("bpawn.png"));
+	ImageIcon wbishop = new ImageIcon(getClass().getResource("wbishop.png"));
+	ImageIcon bbishop = new ImageIcon(getClass().getResource("bbishop.png"));
+	ImageIcon wrook = new ImageIcon(getClass().getResource("wrook.png"));
+	ImageIcon brook = new ImageIcon(getClass().getResource("brook.png"));
+	ImageIcon wqueen = new ImageIcon(getClass().getResource("wqueen.png"));
+	ImageIcon bqueen = new ImageIcon(getClass().getResource("bqueen.png"));
+	ImageIcon wking = new ImageIcon(getClass().getResource("wking.png"));
+	ImageIcon bking = new ImageIcon(getClass().getResource("bking.png"));
+	ImageIcon wknight = new ImageIcon(getClass().getResource("wknight.png"));
 	//create client and other needed frames
 	private static ChessClient client;
 	private static AddressFrame addressFrame;
