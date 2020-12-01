@@ -56,8 +56,8 @@ public class ChessClient extends JFrame
 	private static SessionFrame sessionFrame;
 
 	// create registries and sessions
-	private static Registry[] reg = new Registry[3];
-	private static GameSessionInterface[] sesh = new GameSessionInterface[3];
+	private static Registry[] reg = new Registry[2];
+	private static GameSessionInterface[] sesh = new GameSessionInterface[2];
 
 	
 	public ChessClient() 
