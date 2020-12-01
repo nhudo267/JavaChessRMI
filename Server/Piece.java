@@ -43,4 +43,12 @@ public class Piece {
 	{
 		this.positionY = y;
 	}
+  public Piece returnCopy()
+	{
+		return new Piece(positionX, positionY, color, getType());
+	}
+	public String getType()
+	{
+		return pieceType;
+	}
 }
