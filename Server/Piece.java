@@ -26,4 +26,21 @@ public class Piece {
 	{
 		this.color = color;
 	}
+
+  public int getPositionX() 
+	{
+		return positionX;
+	}
+	public void setPositionX(int x) 
+	{
+		this.positionX = x;
+	}
+	public int getPositionY() 
+	{
+		return positionY;
+	}
+	public void setPositionY(int y) 
+	{
+		this.positionY = y;
+	}
 }
