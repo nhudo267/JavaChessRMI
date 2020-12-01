@@ -18,4 +18,12 @@ public class Piece {
 		this.setColor(c);
 		pieceType = pT;
 	}
+  public int getColor() 
+	{
+		return color;
+	}
+	public void setColor(int color) 
+	{
+		this.color = color;
+	}
 }
