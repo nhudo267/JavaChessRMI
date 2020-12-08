@@ -50,19 +50,21 @@ public class ChessClient extends JFrame
 	ImageIcon wking = new ImageIcon(getClass().getResource("wking.png"));
 	ImageIcon bking = new ImageIcon(getClass().getResource("bking.png"));
 	ImageIcon wknight = new ImageIcon(getClass().getResource("wknight.png"));
+	ImageIcon bknight = new ImageIcon(getClass().getResource("bknight.png"));
+	ImageIcon blank = new ImageIcon(getClass().getResource("blank.png"));
 	//create client and other needed frames
 	private static ChessClient client;
 	private static AddressFrame addressFrame;
 	private static SessionFrame sessionFrame;
 
 	// create registries and sessions
-	private static Registry[] reg = new Registry[2];
-	private static GameSessionInterface[] sesh = new GameSessionInterface[2];
+	private static Registry[] reg = new Registry[3];
+	private static GameSessionInterface[] sesh = new GameSessionInterface[3];
 
 	
 	public ChessClient() 
 	{
-		this.setSize(500, 650);
+		this.setSize(500, 750);
 	
 		// use awt.Toolkit to get screensize and set xPos and yPos to the center of the screen
 		Toolkit tk = Toolkit.getDefaultToolkit();
