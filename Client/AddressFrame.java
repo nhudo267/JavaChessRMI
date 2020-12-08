@@ -17,7 +17,7 @@ public class AddressFrame extends JFrame
 	public AddressFrame()
 	{
 		//set size of window
-		this.setSize(400,65);
+		this.setSize(400,650);
 		
 		//use awt.Toolkit to get screensize and set xPos and yPos to the center of the screen
 		Toolkit tk = Toolkit.getDefaultToolkit();
