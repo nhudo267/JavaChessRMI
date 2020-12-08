@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class ChessServer extends JFrame 
 {
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 	
 	private Toolkit tk = Toolkit.getDefaultToolkit();
 	private JPanel pan;
